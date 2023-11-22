@@ -8,8 +8,6 @@ from src.utils import get_population
 def generate_bar_chart(labels, values, country, capital, continet): 
   fig, ax = plt.subplots(figsize=(9, 6))
   palette = ['blue', 'red', 'green', 'grey', 'maroon', 'pink', 'orange', 'purple']
-  # palette = ['#4400FF', '#FF0040', '#4DFF00', '#9FA19E', '#DE1451', '#E807D9', '#ED6115', '#33CBE6']
-  # plt.plot(labels, values, linestyle='dashed', color='grey', linewidth=1, marker='o', markerfacecolor="blue", markersize=2)
   bars = ax.bar(labels, values, width=0.87, color=palette)
   ax.spines['right'].set_visible(False)
   ax.spines['top'].set_visible(False)
@@ -48,12 +46,8 @@ def generate_bar_chart(labels, values, country, capital, continet):
     plt.gca().yaxis.set_major_formatter(FuncFormatter(format_population))
 
     if height >= 1000000:
-      # upper_yaxis = (lambda x, pos: '{0:g}M'.format(x/1e6))
-      # ax.yaxis.set_major_formatter(mticker.FuncFormatter(upper_yaxis))
       text_values = "{:.3f}M".format(num)
     else:
-      # lower_yaxis = (lambda x, pos: '{0:g}K'.format((x/1e6) * 1000))
-      # ax.yaxis.set_major_formatter(mticker.FuncFormatter(lower_yaxis))
       text_values = "{:.3f}k".format(num * 1000)
 
     ax.text(bar.get_x() + bar.get_width() / 2, height, text_values, ha='center', va='bottom', fontsize=8, fontweight='bold')
@@ -112,17 +106,14 @@ def generate_barh_chart(objects, performance, country, capital, continent):
     plt.gca().xaxis.set_major_formatter(FuncFormatter(format_population))
 
     if width >=1000000:
-      # upper_yaxis = (lambda x, pos: '{0:g}M'.format(x/1e6))
-      # ax.xaxis.set_major_formatter(mticker.FuncFormatter(upper_yaxis))
       text_values = "{:.3f}M".format(num)
     else:
-      # lower_yaxis = (lambda x, pos: '{0:g}K'.format((x/1e6) * 1000))
-      # ax.xaxis.set_major_formatter(mticker.FuncFormatter(lower_yaxis))
       text_values = "{:.3f}k".format(num * 1000)
 
     plt.text(i.get_width()+0.2, i.get_y()+0.27, text_values, fontsize=8, fontweight='bold', color='grey')
 
   plt.show()
+
 
 def generate_plotdashed_chart(x_points, y_points, country, capital, continent):
   fig, ax = plt.subplots(figsize=(9,6))
@@ -159,15 +150,10 @@ def generate_plotdashed_chart(x_points, y_points, country, capital, continent):
           return f'{value:.0f}'
     plt.gca().yaxis.set_major_formatter(FuncFormatter(format_population))
 
-
     if yi >= 1000000:
-      # upper_yaxis = (lambda x, pos: '{0:g}M'.format(x/1e6))
-      # ax.yaxis.set_major_formatter(mticker.FuncFormatter(upper_yaxis))
       text_values = "{:.3f}M".format(num)
       plt.text(xi, yi, text_values, ha='right', va='bottom', color='grey')
     else:
-      # lower_yaxis = (lambda x, pos: '{0:g}K'.format((x/1e6) * 1000))
-      # ax.yaxis.set_major_formatter(mticker.FuncFormatter(lower_yaxis))
       text_values = "{:.3f}K".format(num * 1000)
       plt.text(xi, yi, text_values, ha='right', va='bottom', color='grey')
   

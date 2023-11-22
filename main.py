@@ -1,21 +1,20 @@
 import src.read_csv as read_csv
 from src.utils import get_population, population_by_country
 from src.charts import generate_bar_chart, generate_barh_chart, generate_plotdashed_chart, generate_plot_line_chart
-import pandas as pd
 from shutil import get_terminal_size
 
 def run():
     data = read_csv.read_csv('./db/data.csv')
 
     continents = ['North America', 'South America', 'Asia', 'Europe', 'Oceania', 'Africa']
-    num_columns = 1
+    num_columns = 6
     num_rows = len(continents) // num_columns + (len(continents) % num_columns > 0)
     print()
     for i in range(num_rows):
       for j in range(num_columns):
           index = i * num_columns + j
           if index < len(continents):
-            print(f'{index + 1:<4}- {continents[index]:<25}', end='')
+            print(f'{index + 1:<4}{continents[index]:<25}', end='')
     print()
     
     continent_ = input("\nType the continent: ").strip().title()
@@ -33,7 +32,7 @@ def run():
        for j in range(num_columns):
           index = i * num_columns + j
           if index < len(territory):
-             print(f'{index + 1:<4}- {territory[index]:<25}', end=' ')
+             print(f'{index + 1:<4}{territory[index]:<25}', end=' ')
        print()
 
     country = input("\nEnter the country: ").strip().title()
