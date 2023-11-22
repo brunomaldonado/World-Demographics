@@ -7,16 +7,29 @@ This Python project provides a simple and effective visualization of the evoluti
 Make sure you have Python installed. You can install the necessary dependencies by running:
 pip3 install -r requirements.txt
 
-### Clone the repository
+#### Clone the repository
 git clone https://github.com/brunomaldonado/World-Demographics.git
 
-### Run the script
+#### Run the script
+cd World-Demographics 
 python3 main.py
 
 This will generate a chart showing the world population over the years.
 
+Data by continent.
 <p align="center">
   <img src="./images/european_continent.png" alt="europe chart">
+</p>
+
+Data Countries.
+<p align="center">
+  <img src="./images/countries.png" alt="europe chart">
+</p>
+<p align="center">
+  <img src="./images/timor-leste.png" alt="europe chart">
+</p>
+<p align="center">
+  <img src="./images/indiabar.png" alt="europe chart">
 </p>
 
 Customization
