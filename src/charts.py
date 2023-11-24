@@ -54,11 +54,41 @@ def generate_bar_chart(labels, values, country, capital, continet):
 
   plt.show()
 
-# def generate_pie_chart(labels, values):
-#   fig, ax = plt.subplots()
-#   ax.pie(values, labels=labels)
-#   ax.axis('equal')
-#   plt.show()
+
+def generate_pie_chart(data, continent_):
+  fig, ax = plt.subplots(figsize=(9, 6))
+
+  # world_population_percentage = []
+  # territories = []
+  population_percentage = []
+  countries = []
+
+  for idx, world_percentage in enumerate(data):
+    percentage_ = world_percentage['World Population Percentage']
+    # world_population_percentage.append(percentage_)
+    country = world_percentage['Country/Territory']
+    # territories.append(country)
+
+    if world_percentage['Continent'] == str(continent_): # 'Asia'
+      countries.append(world_percentage['Country/Territory'])
+      population_percentage.append(world_percentage['World Population Percentage'])
+
+  percentage = list(map(float, population_percentage))
+
+  percentage_continent_countries = {'Asia': 10, 'Europe': 12, 'Africa': 19, 'South America': 10, 'North America': 8, 'Oceania': 5}
+
+  for key, value in percentage_continent_countries.items():
+    if key == str(continent_):
+      top_countries = value
+      explode_2d = [0.05] + [0] * (top_countries - 1)
+
+  sorted_data = sorted(zip(percentage, countries), reverse=True)
+  values, labels = zip(*sorted_data[:top_countries])
+  ax.pie(values, labels=labels, autopct='%1.1f%%', explode=explode_2d)
+  ax.axis('equal')
+  plt.legend()
+  plt.show()
+
 
 def generate_barh_chart(objects, performance, country, capital, continent):
   fig, ax = plt.subplots(figsize=(9, 6))
@@ -115,7 +145,7 @@ def generate_barh_chart(objects, performance, country, capital, continent):
   plt.show()
 
 
-def generate_plotdashed_chart(x_points, y_points, country, capital, continent):
+def generate_plot_chart(x_points, y_points, country, capital, continent):
   fig, ax = plt.subplots(figsize=(9,6))
   ax.plot(x_points, y_points, linestyle='dashed', color='green', linewidth=1.5, marker='o', markerfacecolor="blue", markersize=3.5)
 
@@ -160,7 +190,7 @@ def generate_plotdashed_chart(x_points, y_points, country, capital, continent):
   plt.show()
 
 
-def generate_plot_line_chart(data, continent_):
+def generate_line_chart(data, continent_):
   fig, ax = plt.subplots(figsize=(11,8))
   
   countries_to_look_at = []
