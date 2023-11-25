@@ -6,35 +6,29 @@ from shutil import get_terminal_size
 def run():
     data = read_csv.read_csv('./db/data.csv')
        
-    territory = []
-    continents = []
-    for idx, i in enumerate(data):
-      country = i['Country/Territory']
-      territory.append(country)
-      continent_ = i['Continent']
-      continents.append(continent_)
-    print()
-
-    continent = list(set(continents))
-
+    territory = list(map(lambda i: i['Country/Territory'], data))
+    continent_ = list(map(lambda i: i['Continent'], data))
+    continents = list(set(continent_))
+    # print("territory", territory)
+    # print("continents", continents)
     num_columns = 6
     num_rows_country = len(territory) // num_columns + (len(territory) % num_columns > 0)
-    num_rows_continent = len(continent) // num_columns + (len(continent) % num_columns > 0)
-
+    num_rows_continent = len(continents) // num_columns + (len(continents) % num_columns > 0)
+    print()
     for i in range(num_rows_continent):
        for j in range(num_columns):
           index = i * num_columns + j
-          if index < len(continent):
-             print(f'{index + 1:<4}{continent[index]:<25}', end=' ')
+          if index < len(continents):
+             print(f'{index + 1:<4}{continents[index]:<25}', end=' ')
        print()
 
-    continent_ = input("\nType the continent: ").strip().title()
+    continent = input("\nType the continent: ").strip().title()
 
     option_chart = int(input("\noption: [1]. line chart [2]. pie chart \noption: "))
     if option_chart == 1:
-      generate_line_chart(data, continent_)
+      generate_line_chart(data, continent)
     if option_chart == 2:
-      generate_pie_chart(data, continent_)
+      generate_pie_chart(data, continent)
 
     for i in range(num_rows_country):
        for j in range(num_columns):
@@ -76,4 +70,4 @@ def run():
 if __name__ == '__main__':
     run()
 
-    # 57397373
+    # 56495061

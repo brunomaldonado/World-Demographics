@@ -55,49 +55,46 @@ def generate_bar_chart(labels, values, country, capital, continet):
   plt.show()
 
 
-def generate_pie_chart(data, continent_):
+def generate_pie_chart(data, continent):
   fig, ax = plt.subplots(figsize=(9, 6))
 
-  # world_population_percentage = []
-  # territories = []
-  population_percentage = []
+  continent_and_country = list(filter(lambda i: i['Continent'] == str(continent), data))
+  world_countries = list(map(lambda i: i['Country/Territory'], data))
+  world_population_percentage = list(map(lambda i: i['World Population Percentage'], data))
+  world_percentage = list(map(float, world_population_percentage))
+  # print("continent ===> ", continent_and_country)
+
   countries = []
-
-  for idx, world_percentage in enumerate(data):
-    percentage_ = world_percentage['World Population Percentage']
-    # world_population_percentage.append(percentage_)
-    country = world_percentage['Country/Territory']
-    # territories.append(country)
-
-    if world_percentage['Continent'] == str(continent_): # 'Asia'
-      countries.append(world_percentage['Country/Territory'])
-      population_percentage.append(world_percentage['World Population Percentage'])
-
+  population_percentage = []
+  for i in continent_and_country:
+    # print(f"{i['Country/Territory']} {i['World Population Percentage']}")
+    country = i['Country/Territory']
+    percentages = i['World Population Percentage'] 
+    countries.append(country)
+    population_percentage.append(percentages)
+  
+  print(countries)
   percentages = list(map(float, population_percentage))
+  print(percentages)
 
   percentage_continent_countries = {'Asia': 10, 'Europe': 12, 'Africa': 19, 'South America': 10, 'North America': 8, 'Oceania': 5}
 
   for key, value in percentage_continent_countries.items():
-    if key == str(continent_):
+    if key == str(continent):
       top_countries = value
       explode_2d = [0.05] + [0] * (top_countries - 1)
 
   sorted_data = sorted(zip(percentages, countries), reverse=True)
   values, labels = zip(*sorted_data[:top_countries])
   ax.pie(values, labels=labels, autopct='%1.1f%%', explode=explode_2d)
-
-  # data = list(filter(lambda item: item['Continent'] == str(continent_), data))
-  # countries = list(map(lambda x: x['Country/Territory'], data))
-  # percentages = list(map(lambda x: x['World Population Percentage'], data))
-  # ax.pie(countries, labels=percentages, autopct='%1.1f%%')
   ax.axis('equal')
 
-  continent_ = continent_.replace('Europe', 'European')
-  continent_ = continent_.replace('South America', 'South American')
-  continent_ = continent_.replace('North America', 'North American')
-  continent_ = continent_.replace('Asia', 'Asian')
-  continent_ = continent_.replace('Africa', 'African')
-  plt.title(f"Percentage of population of the countries of the \n{continent_} continent", size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=.9, transform = fig.transFigure)
+  continent = continent.replace('Europe', 'European')
+  continent = continent.replace('South America', 'South American')
+  continent = continent.replace('North America', 'North American')
+  continent = continent.replace('Asia', 'Asian')
+  continent = continent.replace('Africa', 'African')
+  plt.title(f"Percentage of population of the countries of the \n{continent} continent", size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=.9, transform = fig.transFigure)
 
   plt.legend()
   plt.show()
@@ -203,12 +200,12 @@ def generate_plot_chart(x_points, y_points, country, capital, continent):
   plt.show()
 
 
-def generate_line_chart(data, continent_):
+def generate_line_chart(data, continent):
   fig, ax = plt.subplots(figsize=(11,8))
   
   countries_to_look_at = []
   for i in data:
-    if i['Continent'] == str(continent_): #'Europe'
+    if i['Continent'] == str(continent): #'Europe'
       key, value = get_population(i)
       x_points = key
       y_points = list(map(int, value))
@@ -224,7 +221,7 @@ def generate_line_chart(data, continent_):
 
           upper_populations = {'Asia': 200000000, 'Europe': 65000000, 'Africa': 45000000, 'South America': 32000000, 'North America': 20000000, 'Oceania': 2000000}
           for key, value in upper_populations.items():
-            if key == continent_:
+            if key == continent:
               if yi >= value:
                 text_values = "{:.3f}M".format(num)
                 plt.text(xi, yi, text_values, ha='right', va='bottom', color='grey')
@@ -244,13 +241,13 @@ def generate_line_chart(data, continent_):
   ax.xaxis.set_ticks_position('none')
   ax.yaxis.set_ticks_position('none')
 
-  continent_ = continent_.replace('Europe', 'European')
-  continent_ = continent_.replace("Asia", "Asian")
-  continent_ = continent_.replace("Africa", "African")
-  continent_ = continent_.replace("North America", "North American")
-  continent_ = continent_.replace("South America", "South American")
+  continent = continent.replace('Europe', 'European')
+  continent = continent.replace("Asia", "Asian")
+  continent = continent.replace("Africa", "African")
+  continent = continent.replace("North America", "North American")
+  continent = continent.replace("South America", "South American")
 
-  plt.title(f"Top of the countries with the most rapidly growing population of the {continent_} continent ", size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=0.96, transform = fig.transFigure)
+  plt.title(f"Top of the countries with the most rapidly growing population of the {continent} continent ", size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=0.96, transform = fig.transFigure)
   plt.suptitle("From the year 1970 to the year 2022", size=10, weight="bold", fontfamily="sans", color="#080808", horizontalalignment = "left", x=0.12, y=0.94, transform = fig.transFigure)
 
   plt.xlabel('Years census', labelpad=8, size=10, fontfamily="sans", weight="bold")
