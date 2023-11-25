@@ -73,7 +73,7 @@ def generate_pie_chart(data, continent_):
       countries.append(world_percentage['Country/Territory'])
       population_percentage.append(world_percentage['World Population Percentage'])
 
-  percentage = list(map(float, population_percentage))
+  percentages = list(map(float, population_percentage))
 
   percentage_continent_countries = {'Asia': 10, 'Europe': 12, 'Africa': 19, 'South America': 10, 'North America': 8, 'Oceania': 5}
 
@@ -82,10 +82,23 @@ def generate_pie_chart(data, continent_):
       top_countries = value
       explode_2d = [0.05] + [0] * (top_countries - 1)
 
-  sorted_data = sorted(zip(percentage, countries), reverse=True)
+  sorted_data = sorted(zip(percentages, countries), reverse=True)
   values, labels = zip(*sorted_data[:top_countries])
   ax.pie(values, labels=labels, autopct='%1.1f%%', explode=explode_2d)
+
+  # data = list(filter(lambda item: item['Continent'] == str(continent_), data))
+  # countries = list(map(lambda x: x['Country/Territory'], data))
+  # percentages = list(map(lambda x: x['World Population Percentage'], data))
+  # ax.pie(countries, labels=percentages, autopct='%1.1f%%')
   ax.axis('equal')
+
+  continent_ = continent_.replace('Europe', 'European')
+  continent_ = continent_.replace('South America', 'South American')
+  continent_ = continent_.replace('North America', 'North American')
+  continent_ = continent_.replace('Asia', 'Asian')
+  continent_ = continent_.replace('Africa', 'African')
+  plt.title(f"Percentage of population of the countries of the \n{continent_} continent", size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=.9, transform = fig.transFigure)
+
   plt.legend()
   plt.show()
 
