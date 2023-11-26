@@ -58,24 +58,26 @@ def generate_bar_chart(labels, values, country, capital, continet):
 def generate_pie_chart(data, continent):
   fig, ax = plt.subplots(figsize=(9, 6))
 
-  continent_and_country = list(filter(lambda i: i['Continent'] == str(continent), data))
+  continent_and_countries = list(filter(lambda i: i['Continent'] == str(continent), data))
   world_countries = list(map(lambda i: i['Country/Territory'], data))
   world_population_percentage = list(map(lambda i: i['World Population Percentage'], data))
   world_percentage = list(map(float, world_population_percentage))
-  # print("continent ===> ", continent_and_country)
+  # print("continent ===> ", continent_and_countries)
+  # world pie chart
+  # ax.pie(world_percentage, labels=world_countries, autopct='%1.1f%%')
 
   countries = []
   population_percentage = []
-  for i in continent_and_country:
+  for i in continent_and_countries:
     # print(f"{i['Country/Territory']} {i['World Population Percentage']}")
     country = i['Country/Territory']
     percentages = i['World Population Percentage'] 
     countries.append(country)
     population_percentage.append(percentages)
   
-  print(countries)
+  # print(countries)
   percentages = list(map(float, population_percentage))
-  print(percentages)
+  # print(percentages)
 
   percentage_continent_countries = {'Asia': 10, 'Europe': 12, 'Africa': 19, 'South America': 10, 'North America': 8, 'Oceania': 5}
 
@@ -85,7 +87,9 @@ def generate_pie_chart(data, continent):
       explode_2d = [0.05] + [0] * (top_countries - 1)
 
   sorted_data = sorted(zip(percentages, countries), reverse=True)
+  # print("sorted_data ===> ", sorted_data)
   values, labels = zip(*sorted_data[:top_countries])
+  # print("values labels ==> ", values, labels)
   ax.pie(values, labels=labels, autopct='%1.1f%%', explode=explode_2d)
   ax.axis('equal')
 
