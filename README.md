@@ -5,10 +5,10 @@ This Python project provides a simple and effective visualization of the evoluti
 #### Requirements
 
 Make sure you have Python installed. You can install the necessary dependencies by running:
-- pip3 install -r requirements.txt
+- `pip3 install -r requirements.txt`
 
 #### Clone the repository
-git clone https://github.com/brunomaldonado/World-Demographics.git
+- `git clone https://github.com/brunomaldonado/World-Demographics.git`
 
 #### Run the script
 - `cd World-Demographics `
@@ -25,12 +25,27 @@ Data countries.
 <p align="center">
   <img src="./images/countries.png" style="border-radius:6px" alt="europe chart">
 </p>
-<p align="center">
+
+<table>
+  <tr>
+    <td valign="top"><img src="./images/timor_leste.png" style="border-radius:6px" alt="europe chart"></td>
+    <td valign="top"><img src="./images/united_arab_emirates.png" style="border-radius:6px" alt="europe chart"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px" alt="europe chart"></td>
+    <td valign="top"><img src="./images/pie_chart.png" style="border-radius:6px" alt="europe chart"></td>
+  </tr>
+</table>
+
+<!-- <p align="center">
   <img src="./images/timor_leste.png" style="border-radius:6px" alt="europe chart">
 </p>
 <p align="center">
   <img src="./images/united_arab_emirates.png" style="border-radius:6px" alt="europe chart">
-</p>
+</p> -->
 
 #### Customization
 Feel free to customize the code to suit your specific needs. You can adjust population and year data in the main.py file according to your preferences.

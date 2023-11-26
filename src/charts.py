@@ -5,9 +5,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 from src.utils import get_population
 
+# global function and variables 
+palette = ['blue', 'red', 'green', 'grey', 'maroon', 'pink', 'orange', 'purple']
+
+def format_population(value, _):
+      if value >= 1e6:
+          return f'{value / 1e6:.1f}M'
+      elif value >= 1e3:
+          return f'{value / 1e3:.0f}K'
+      else:
+          return f'{value:.0f}'
+
 def generate_bar_chart(labels, values, country, capital, continet): 
   fig, ax = plt.subplots(figsize=(9, 6))
-  palette = ['blue', 'red', 'green', 'grey', 'maroon', 'pink', 'orange', 'purple']
   bars = ax.bar(labels, values, width=0.87, color=palette)
   ax.spines['right'].set_visible(False)
   ax.spines['top'].set_visible(False)
@@ -36,15 +46,9 @@ def generate_bar_chart(labels, values, country, capital, continet):
     height = bar.get_height()
     num = height/1e6
 
-    def format_population(value, _):
-      if value >= 1e6:
-          return f'{value / 1e6:.1f}M'
-      elif value >= 1e3:
-          return f'{value / 1e3:.0f}K'
-      else:
-          return f'{value:.0f}'
+    # formatter 'y' axis K-thousands & M-millions
     plt.gca().yaxis.set_major_formatter(FuncFormatter(format_population))
-
+    # text formatter
     if height >= 1000000:
       text_values = "{:.3f}M".format(num)
     else:
@@ -59,25 +63,16 @@ def generate_pie_chart(data, continent):
   fig, ax = plt.subplots(figsize=(9, 6))
 
   continent_and_countries = list(filter(lambda i: i['Continent'] == str(continent), data))
-  world_countries = list(map(lambda i: i['Country/Territory'], data))
-  world_population_percentage = list(map(lambda i: i['World Population Percentage'], data))
-  world_percentage = list(map(float, world_population_percentage))
+  # world_countries = list(map(lambda i: i['Country/Territory'], data))
+  # world_population_percentage = list(map(lambda i: i['World Population Percentage'], data))
+  # world_percentage = list(map(float, world_population_percentage))
   # print("continent ===> ", continent_and_countries)
   # world pie chart
   # ax.pie(world_percentage, labels=world_countries, autopct='%1.1f%%')
 
-  countries = []
-  population_percentage = []
-  for i in continent_and_countries:
-    # print(f"{i['Country/Territory']} {i['World Population Percentage']}")
-    country = i['Country/Territory']
-    percentages = i['World Population Percentage'] 
-    countries.append(country)
-    population_percentage.append(percentages)
-  
-  # print(countries)
+  countries = list(map(lambda i: i['Country/Territory'], continent_and_countries))
+  population_percentage = list(map(lambda i: i['World Population Percentage'], continent_and_countries))
   percentages = list(map(float, population_percentage))
-  # print(percentages)
 
   percentage_continent_countries = {'Asia': 10, 'Europe': 12, 'Africa': 19, 'South America': 10, 'North America': 8, 'Oceania': 5}
 
@@ -106,7 +101,6 @@ def generate_pie_chart(data, continent):
 
 def generate_barh_chart(objects, performance, country, capital, continent):
   fig, ax = plt.subplots(figsize=(9, 6))
-  palette = ['blue', 'red', 'green', 'grey', 'maroon', 'pink', 'orange', 'purple']
 
   y_pos = np.arange(len(objects))
 
@@ -139,16 +133,9 @@ def generate_barh_chart(objects, performance, country, capital, continent):
   for i in ax.patches:
     width = i.get_width()
     num = width/1e6
-
-    def format_population(value, _):
-      if value >= 1e6:
-          return f'{value / 1e6:.1f}M'
-      elif value >= 1e3:
-          return f'{value / 1e3:.0f}K'
-      else:
-          return f'{value:.0f}'
+    # formatter 'x' axis K-thousands & M-millions
     plt.gca().xaxis.set_major_formatter(FuncFormatter(format_population))
-
+    # text formatter
     if width >=1000000:
       text_values = "{:.3f}M".format(num)
     else:
@@ -184,16 +171,9 @@ def generate_plot_chart(x_points, y_points, country, capital, continent):
 
   for (xi, yi) in zip(x_points, y_points):
     num = yi/1e6
-
-    def format_population(value, _):
-      if value >= 1e6:
-          return f'{value / 1e6:.1f}M'
-      elif value >= 1e3:
-          return f'{value / 1e3:.0f}K'
-      else:
-          return f'{value:.0f}'
+    # formatter 'x' axis K-thousands & M-millions
     plt.gca().yaxis.set_major_formatter(FuncFormatter(format_population))
-
+    # text formatter
     if yi >= 1000000:
       text_values = "{:.3f}M".format(num)
       plt.text(xi, yi, text_values, ha='right', va='bottom', color='grey')
@@ -222,7 +202,7 @@ def generate_line_chart(data, continent):
           num = yi/1e6
           upper_yaxis = (lambda x, pos: '{0:g}M'.format(x/1e6))
           ax.yaxis.set_major_formatter(mticker.FuncFormatter(upper_yaxis))
-
+          # text formatter
           upper_populations = {'Asia': 200000000, 'Europe': 65000000, 'Africa': 45000000, 'South America': 32000000, 'North America': 20000000, 'Oceania': 2000000}
           for key, value in upper_populations.items():
             if key == continent:

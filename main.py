@@ -44,18 +44,16 @@ def run():
     country = country.replace("Dr", "DR")
     
     result = population_by_country(data, country)
-   
+
     if len(result) > 0:
       country = result[0]
       key, value = get_population(country)
       labels = key
       values = list(map(int, value))
       print()
-
-      for i in result:
-        country = i['Country/Territory']
-        capital = i['Capital']
-        continent = i['Continent']
+      country = result[0]['Country/Territory']
+      capital = result[0]['Capital']
+      continent = result[0]['Continent']
         
       option_chart = int(input("option : [1]. vertical bars [2]. horizontal bars [3]. plot dashes \noption: "))
       if option_chart == 1:
