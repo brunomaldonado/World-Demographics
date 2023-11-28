@@ -5,14 +5,20 @@ This Python project provides a simple and effective visualization of the evoluti
 #### Requirements
 
 Make sure you have Python installed. You can install the necessary dependencies by running:
-- `pip3 install -r requirements.txt`
+```sh
+pip3 install -r requirements.txt
+```
 
 #### Clone the repository
-- `git clone https://github.com/brunomaldonado/World-Demographics.git`
+```sh
+git clone https://github.com/brunomaldonado/World-Demographics.git
+```
 
 #### Run the script
-- `cd World-Demographics `
-- `python3 main.py`
+```sh
+cd World-Demographics
+python3 main.py
+```
 
 This will generate a chart showing the world population over the years.
 
