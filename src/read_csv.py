@@ -16,5 +16,5 @@ def read_csv(path):
   
 if __name__ == '__main__':
   pass
-  # data = read_csv('./../db/data.csv')
+  # data = read_csv('../db/data.csv')
   # print(data)

@@ -37,15 +37,10 @@ def generate_bar_chart(labels, values, country, capital, continet):
   plt.title("Population of " + country + " - " + capital + " - " + continet, size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=0.96, transform = fig.transFigure)
   plt.suptitle("From the year 1970 to the year 2022", size=10, weight="bold", fontfamily="sans", color="#080808", horizontalalignment = "left", x=0.12, y=0.94, transform = fig.transFigure)
   plt.grid(color='grey', linestyle='-.', linewidth=0.5, alpha=0.4)
-  
-  # vals = ax.get_yticks()
-  # for tick in vals:
-  #   ax.axhline(y=tick, linestyle="dashed", alpha=0.3, color="#9FA19E", zorder=1)
 
   for bar in bars:
     height = bar.get_height()
     num = height/1e6
-
     # formatter 'y' axis K-thousands & M-millions
     plt.gca().yaxis.set_major_formatter(FuncFormatter(format_population))
     # text formatter
@@ -56,20 +51,14 @@ def generate_bar_chart(labels, values, country, capital, continet):
 
     ax.text(bar.get_x() + bar.get_width() / 2, height, text_values, ha='center', va='bottom', fontsize=8, fontweight='bold')
 
-  plt.show()
+  plt.savefig(f'./images/{country}.png')
+  plt.close()
 
 
 def generate_pie_chart(data, continent):
-  fig, ax = plt.subplots(figsize=(9, 6))
+  fig, ax = plt.subplots(figsize=(10, 6))
 
   continent_and_countries = list(filter(lambda i: i['Continent'] == str(continent), data))
-  # world_countries = list(map(lambda i: i['Country/Territory'], data))
-  # world_population_percentage = list(map(lambda i: i['World Population Percentage'], data))
-  # world_percentage = list(map(float, world_population_percentage))
-  # print("continent ===> ", continent_and_countries)
-  # world pie chart
-  # ax.pie(world_percentage, labels=world_countries, autopct='%1.1f%%')
-
   countries = list(map(lambda i: i['Country/Territory'], continent_and_countries))
   population_percentage = list(map(lambda i: i['World Population Percentage'], continent_and_countries))
   percentages = list(map(float, population_percentage))
@@ -84,7 +73,7 @@ def generate_pie_chart(data, continent):
   sorted_data = sorted(zip(percentages, countries), reverse=True)
   # print("sorted_data ===> ", sorted_data)
   values, labels = zip(*sorted_data[:top_countries])
-  # print("values labels ==> ", values, labels)
+  print("values labels ==> ", values, labels)
   ax.pie(values, labels=labels, autopct='%1.1f%%', explode=explode_2d)
   ax.axis('equal')
 
@@ -95,8 +84,9 @@ def generate_pie_chart(data, continent):
   continent = continent.replace('Africa', 'African')
   plt.title(f"Percentage of population of the countries of the \n{continent} continent", size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=.9, transform = fig.transFigure)
 
-  plt.legend()
-  plt.show()
+  plt.legend(bbox_to_anchor=(.85, 1.0), loc='upper left')
+  plt.savefig(f'./images/{continent}.png')
+  plt.close()
 
 
 def generate_barh_chart(objects, performance, country, capital, continent):
@@ -126,10 +116,6 @@ def generate_barh_chart(objects, performance, country, capital, continent):
 
   plt.grid(color='grey', linestyle='-.', linewidth=0.5, alpha=0.4)
 
-  # vals = ax.get_yticks()
-  # for tick in vals:
-  #   ax.axhline(y=tick, linestyle="dashed", alpha=0.3, color="#9FA19E", zorder=1)
-
   for i in ax.patches:
     width = i.get_width()
     num = width/1e6
@@ -143,8 +129,8 @@ def generate_barh_chart(objects, performance, country, capital, continent):
 
     plt.text(i.get_width()+0.2, i.get_y()+0.27, text_values, fontsize=8, fontweight='bold', color='grey')
 
-  plt.show()
-
+  plt.savefig(f'./images/{country}.png')
+  plt.close()
 
 def generate_plot_chart(x_points, y_points, country, capital, continent):
   fig, ax = plt.subplots(figsize=(9,6))
@@ -181,11 +167,11 @@ def generate_plot_chart(x_points, y_points, country, capital, continent):
       text_values = "{:.3f}K".format(num * 1000)
       plt.text(xi, yi, text_values, ha='right', va='bottom', color='grey')
   
-  plt.show()
-
+  plt.savefig(f'./images/{country}.png')
+  plt.close()
 
 def generate_line_chart(data, continent):
-  fig, ax = plt.subplots(figsize=(11,8))
+  fig, ax = plt.subplots(figsize=(15,8))
   
   countries_to_look_at = []
   for i in data:
@@ -238,9 +224,9 @@ def generate_line_chart(data, continent):
   plt.ylabel('Populations in (M - millions)', labelpad=8, size=10, fontfamily="sans", weight="bold")
 
   plt.grid(color='grey', linestyle='-.', linewidth=0.5, alpha=0.4)
-
-  plt.legend(countries_to_look_at)
-  plt.show()
+  plt.legend(countries_to_look_at, bbox_to_anchor=(.96, 1.0), loc='upper left')
+  plt.savefig(f'./images/{continent}.png')
+  plt.close()
 
 if __name__ == '__main__':
   pass
