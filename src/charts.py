@@ -51,9 +51,8 @@ def generate_bar_chart(labels, values, country, capital, continet):
 
     ax.text(bar.get_x() + bar.get_width() / 2, height, text_values, ha='center', va='bottom', fontsize=8, fontweight='bold')
 
-  # plt.savefig(f'./images/{country}.png')
-  # plt.close()
-  plt.show()
+  plt.savefig(f'./images/{country}.png')
+  plt.close()
 
 
 def generate_pie_chart(data, continent):
@@ -86,9 +85,8 @@ def generate_pie_chart(data, continent):
   plt.title(f"Percentage of population of the countries of the \n{continent} continent", size=12, weight="bold", fontfamily="sans", color="#080404", horizontalalignment = "left", x=0.12, y=.9, transform = fig.transFigure)
 
   plt.legend(bbox_to_anchor=(.85, 1.0), loc='upper left')
-  # plt.savefig(f'./images/{continent}.png')
-  # plt.close()
-  plt.show()
+  plt.savefig(f'./images/{continent}.png')
+  plt.close()
 
 
 def generate_barh_chart(objects, performance, country, capital, continent):
@@ -131,9 +129,8 @@ def generate_barh_chart(objects, performance, country, capital, continent):
 
     plt.text(i.get_width()+0.2, i.get_y()+0.27, text_values, fontsize=8, fontweight='bold', color='grey')
 
-  # plt.savefig(f'./images/{country}.png')
-  # plt.close()
-  plt.show()
+  plt.savefig(f'./images/{country}.png')
+  plt.close()
 
 def generate_plot_chart(x_points, y_points, country, capital, continent):
   fig, ax = plt.subplots(figsize=(9,6))
@@ -170,9 +167,8 @@ def generate_plot_chart(x_points, y_points, country, capital, continent):
       text_values = "{:.3f}K".format(num * 1000)
       plt.text(xi, yi, text_values, ha='right', va='bottom', color='grey')
   
-  # plt.savefig(f'./images/{country}.png')
-  # plt.close()
-  plt.show()
+  plt.savefig(f'./images/{country}.png')
+  plt.close()
 
 def generate_line_chart(data, continent):
   fig, ax = plt.subplots(figsize=(15,8))
@@ -229,9 +225,8 @@ def generate_line_chart(data, continent):
 
   plt.grid(color='grey', linestyle='-.', linewidth=0.5, alpha=0.4)
   plt.legend(countries_to_look_at, bbox_to_anchor=(.96, 1.0), loc='upper left')
-  # plt.savefig(f'./images/{continent}.png')
-  # plt.close()
-  plt.show()
+  plt.savefig(f'./images/{continent}.png')
+  plt.close()
 
 if __name__ == '__main__':
   pass
