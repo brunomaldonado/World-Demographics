@@ -34,15 +34,15 @@ Data countries.
 </p>
 
 <p align="center">
-  <img src="./images/trinidad_and_tobago.png" style="border-radius:6px", width="45% alt="trinidad_and_tobago chart">
+  <img src="./images/trinidad_tobago.png" style="border-radius:6px", width="45% alt="trinidad_and_tobago chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/arab_emirates.png" style="border-radius:6px", width="45% alt="european_continent chart">
+  <img src="./images/arab_emirates.png" style="border-radius:6px", width="45% alt="united arab emirates chart">
 </p>
 
 <p align="center">
-  <img src="./images/Gibraltar_gibraltar.png" style="border-radius:6px", width="45% alt="european_continent chart">
+  <img src="./images/Gibraltar_gibraltar.png" style="border-radius:6px", width="45% alt="gibraltar chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/asian_continent.png" style="border-radius:6px", width="45% alt="european_continent chart">
+  <img src="./images/asian_continent.png" style="border-radius:6px", width="45% alt="asian_continent chart">
 </p>
 
 <!-- <table style="border:none; border:0; border-collapse:collapse;">
