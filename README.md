@@ -5,7 +5,6 @@ This Python project provides a simple and effective visualization of the evoluti
 #### Requirements
 
 Make sure you have Python installed. You can install the necessary dependencies by running:
-<<<<<<< HEAD
 
 #### Clone the repository
 ```sh
@@ -20,32 +19,13 @@ python3 main.py
 #### Run the script
 ```
 (env) > python3 main.py
-=======
-```sh
-pip3 install -r requirements.txt
-```
-
-#### Clone the repository
-```sh
-git clone https://github.com/brunomaldonado/World-Demographics.git
-```
-
-#### Run the script
-```sh
-cd World-Demographics
-python3 main.py
->>>>>>> refs/remotes/origin/master
 ```
 
 This will generate a chart showing the world population over the years.
 
 Data by continent.
 <p align="center">
-<<<<<<< HEAD
   <img src="./images/europe.png" style="border-radius:6px" alt="europe chart">
-=======
-  <img src="./images/north_america.png" style="border-radius:6px;" alt="europe chart">
->>>>>>> refs/remotes/origin/master
 </p>
 
 Data countries.
@@ -78,13 +58,11 @@ Data countries.
 
 <!-- <table>
   <tr>
-<<<<<<< HEAD
     <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px" alt="europe chart"></td>
     <td valign="top"><img src="./images/asia.png" style="border-radius:6px" alt="europe chart"></td>
 =======
     <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px;" alt="europe chart"></td>
     <td valign="top"><img src="./images/pie_chart.png" style="border-radius:6px;" alt="europe chart"></td>
->>>>>>> refs/remotes/origin/master
   </tr>
 </table> -->
 
