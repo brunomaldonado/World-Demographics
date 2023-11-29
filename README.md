@@ -25,45 +25,45 @@ This will generate a chart showing the world population over the years.
 
 Data by continent.
 <p align="center">
-  <img src="./images/European.png" style="border-radius:6px" alt="europe chart">
+  <img src="./images/european_continent.png" style="border-radius:6px" alt="european_continent chart">
 </p>
 
 Data countries.
 <p align="center">
-  <img src="./images/countries.png" style="border-radius:6px;" alt="europe chart">
+  <img src="./images/countries.png" style="border-radius:6px;" alt="european_continent chart">
 </p>
 
 <p align="center">
-  <img src="./images/Trinidad_and_Tobago.png" style="border-radius:6px", width="45% alt="europe chart">
+  <img src="./images/trinidad_and_tobago.png" style="border-radius:6px", width="45% alt="trinidad_and_tobago chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/United_Arab_Emirates.png" style="border-radius:6px", width="45% alt="europe chart">
+  <img src="./images/arab_emirates.png" style="border-radius:6px", width="45% alt="european_continent chart">
 </p>
 
 <p align="center">
-  <img src="./images/Gibraltar.png" style="border-radius:6px", width="45% alt="europe chart">
+  <img src="./images/Gibraltar_gibraltar.png" style="border-radius:6px", width="45% alt="european_continent chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/Asian.png" style="border-radius:6px", width="45% alt="europe chart">
+  <img src="./images/asian_continent.png" style="border-radius:6px", width="45% alt="european_continent chart">
 </p>
 
 <!-- <table style="border:none; border:0; border-collapse:collapse;">
   <tr style="border:none; border:0; border-collapse:collapse">
-    <td valign="center"  style="border:none; border:0; border-collapse:collapse"><img src="./images/timor_leste.png" style="border-radius:6px;" alt="europe chart"></td>
-    <td valign="top" style="border:none; border:0; border-collapse:collapse"><img src="./images/united_arab_emirates.png" style="border-radius:6px;" alt="europe chart"></td>
+    <td valign="center"  style="border:none; border:0; border-collapse:collapse"><img src="./images/trinidad_and_tobago.png" style="border-radius:6px;" alt="european_continent chart"></td>
+    <td valign="top" style="border:none; border:0; border-collapse:collapse"><img src="./images/united_arab_emirates.png" style="border-radius:6px;" alt="european_continent chart"></td>
   </tr>
    <tr style="border:none; border:0; border-collapse:collapse">
-    <td valign="top" style="border: none; border-collapse:collapse"><img src="./images/gibraltar.png" style="border-radius:6px" alt="europe chart"></td>
-    <td valign="top" style="border:none; border:0; border-collapse:collapse"><img src="./images/asia.png" style="border-radius:6px" alt="europe chart"></td>
+    <td valign="top" style="border: none; border-collapse:collapse"><img src="./images/gibraltar.png" style="border-radius:6px" alt="european_continent chart"></td>
+    <td valign="top" style="border:none; border:0; border-collapse:collapse"><img src="./images/asian_continent.png" style="border-radius:6px" alt="european_continent chart"></td>
   </tr>
 </table> -->
 
 <!-- |  [![](https://i.postimg.cc/zBF91MgQ/timor-leste.png)](https://i.postimg.cc/zBF91MgQ/timor-leste.png) | [![](https://i.postimg.cc/59ksFbb3/united-arab-emirates.png)](https://i.postimg.cc/59ksFbb3/united-arab-emirates.png)  |
 | ------------ | ------------ |
-| [![](https://i.postimg.cc/mrXmNs7B/gibraltar.png)](https://i.postimg.cc/mrXmNs7B/gibraltar.png)  |  [![](https://i.postimg.cc/QCLk0xCG/asia.png)](https://i.postimg.cc/QCLk0xCG/asia.png) | -->
+| [![](https://i.postimg.cc/mrXmNs7B/gibraltar.png)](https://i.postimg.cc/mrXmNs7B/gibraltar.png)  |  [![](https://i.postimg.cc/QCLk0xCG/asian_continent.png)](https://i.postimg.cc/QCLk0xCG/asian_continent.png) | -->
 
 <!-- <table>
   <tr>
     <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px" alt="europe chart"></td>
-    <td valign="top"><img src="./images/asia.png" style="border-radius:6px" alt="europe chart"></td>
+    <td valign="top"><img src="./images/asian_continent.png" style="border-radius:6px" alt="europe chart"></td>
   </tr>
 </table> -->
 
