@@ -25,7 +25,7 @@ This will generate a chart showing the world population over the years.
 
 Data by continent.
 <p align="center">
-  <img src="./images/europe.png" style="border-radius:6px" alt="europe chart">
+  <img src="./images/European.png" style="border-radius:6px" alt="europe chart">
 </p>
 
 Data countries.
@@ -34,35 +34,36 @@ Data countries.
 </p>
 
 <p align="center">
-  <img src="./images/timor_leste.png" style="border-radius:6px", width="45% alt="europe chart">
-  <!-- <img alt="Light" src="./light.png" width="45%"> -->
+  <img src="./images/Trinidad_and_Tobago.png" style="border-radius:6px", width="45% alt="europe chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/united_arab_emirates.png" style="border-radius:6px", width="45% alt="europe chart">
-  <!-- <img alt="Dark" src="./dark.png" width="45%"> -->
+  <img src="./images/United_Arab_Emirates.png" style="border-radius:6px", width="45% alt="europe chart">
 </p>
 
 <p align="center">
-  <img src="./images/gibraltar.png" style="border-radius:6px", width="45% alt="europe chart">
-  <!-- <img alt="Light" src="./light.png" width="45%"> -->
+  <img src="./images/Gibraltar.png" style="border-radius:6px", width="45% alt="europe chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/asia.png" style="border-radius:6px", width="45% alt="europe chart">
-  <!-- <img alt="Dark" src="./dark.png" width="45%"> -->
+  <img src="./images/Asian.png" style="border-radius:6px", width="45% alt="europe chart">
 </p>
 
-<!-- <table>
-  <tr>
-    <td valign="top"><img src="./images/timor_leste.png" style="border-radius:6px;" alt="europe chart"></td>
-    <td valign="top"><img src="./images/united_arab_emirates.png" style="border-radius:6px;" alt="europe chart"></td>
+<!-- <table style="border:none; border:0; border-collapse:collapse;">
+  <tr style="border:none; border:0; border-collapse:collapse">
+    <td valign="center"  style="border:none; border:0; border-collapse:collapse"><img src="./images/timor_leste.png" style="border-radius:6px;" alt="europe chart"></td>
+    <td valign="top" style="border:none; border:0; border-collapse:collapse"><img src="./images/united_arab_emirates.png" style="border-radius:6px;" alt="europe chart"></td>
+  </tr>
+   <tr style="border:none; border:0; border-collapse:collapse">
+    <td valign="top" style="border: none; border-collapse:collapse"><img src="./images/gibraltar.png" style="border-radius:6px" alt="europe chart"></td>
+    <td valign="top" style="border:none; border:0; border-collapse:collapse"><img src="./images/asia.png" style="border-radius:6px" alt="europe chart"></td>
   </tr>
 </table> -->
+
+<!-- |  [![](https://i.postimg.cc/zBF91MgQ/timor-leste.png)](https://i.postimg.cc/zBF91MgQ/timor-leste.png) | [![](https://i.postimg.cc/59ksFbb3/united-arab-emirates.png)](https://i.postimg.cc/59ksFbb3/united-arab-emirates.png)  |
+| ------------ | ------------ |
+| [![](https://i.postimg.cc/mrXmNs7B/gibraltar.png)](https://i.postimg.cc/mrXmNs7B/gibraltar.png)  |  [![](https://i.postimg.cc/QCLk0xCG/asia.png)](https://i.postimg.cc/QCLk0xCG/asia.png) | -->
 
 <!-- <table>
   <tr>
     <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px" alt="europe chart"></td>
     <td valign="top"><img src="./images/asia.png" style="border-radius:6px" alt="europe chart"></td>
-=======
-    <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px;" alt="europe chart"></td>
-    <td valign="top"><img src="./images/pie_chart.png" style="border-radius:6px;" alt="europe chart"></td>
   </tr>
 </table> -->
 
