@@ -24,25 +24,25 @@ This will generate a chart showing the world population over the years.
 
 Data by continent.
 <p align="center">
-  <img src="./images/north_america.png" style="border-radius:6px" alt="europe chart">
+  <img src="./images/north_america.png" style="border-radius:6px;" alt="europe chart">
 </p>
 
 Data countries.
 <p align="center">
-  <img src="./images/countries.png" style="border-radius:6px" alt="europe chart">
+  <img src="./images/countries.png" style="border-radius:6px;" alt="europe chart">
 </p>
 
 <table>
   <tr>
-    <td valign="top"><img src="./images/timor_leste.png" style="border-radius:6px" alt="europe chart"></td>
-    <td valign="top"><img src="./images/united_arab_emirates.png" style="border-radius:6px" alt="europe chart"></td>
+    <td valign="top"><img src="./images/timor_leste.png" style="border-radius:6px;" alt="europe chart"></td>
+    <td valign="top"><img src="./images/united_arab_emirates.png" style="border-radius:6px;" alt="europe chart"></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px" alt="europe chart"></td>
-    <td valign="top"><img src="./images/pie_chart.png" style="border-radius:6px" alt="europe chart"></td>
+    <td valign="top"><img src="./images/gibraltar.png" style="border-radius:6px;" alt="europe chart"></td>
+    <td valign="top"><img src="./images/pie_chart.png" style="border-radius:6px;" alt="europe chart"></td>
   </tr>
 </table>
 
