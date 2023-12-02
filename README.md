@@ -40,9 +40,9 @@ Data countries.
 </p>
 
 <p align="center">
-  <img src="./images/Gibraltar_gibraltar.png" style="border-radius:6px", width="45% alt="gibraltar chart">
+  <img src="./images/Gibraltar_gibraltar.png" style="border-radius:6px; max-width:45%; @media-query", alt="gibraltar chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/asian_continent.png" style="border-radius:6px", width="45% alt="asian_continent chart">
+  <img src="./images/asian_continent.png" style="border-radius:6px; max-width:45%;", alt="asian_continent chart">
 </p>
 
 <!-- <table style="border:none; border:0; border-collapse:collapse;">

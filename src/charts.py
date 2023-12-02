@@ -73,7 +73,7 @@ def generate_pie_chart(data, continent):
   sorted_data = sorted(zip(percentages, countries), reverse=True)
   # print("sorted_data ===> ", sorted_data)
   values, labels = zip(*sorted_data[:top_countries])
-  print("values labels ==> ", values, labels)
+  # print("values labels ==> ", values, labels)
   ax.pie(values, labels=labels, autopct='%1.1f%%', explode=explode_2d)
   ax.axis('equal')
 
@@ -230,3 +230,5 @@ def generate_line_chart(data, continent):
 
 if __name__ == '__main__':
   pass
+
+# 69343657
