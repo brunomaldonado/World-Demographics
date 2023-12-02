@@ -7,6 +7,7 @@ This Python project provides a simple and effective visualization of the evoluti
 Make sure you have Python installed. You can install the necessary dependencies by running:
 
 #### Clone the repository
+
 ```sh
 git clone https://github.com/brunomaldonado/World-Demographics.git
 cd World-Demographics
@@ -17,6 +18,7 @@ python3 main.py
 ```
 
 #### Run the script
+
 ```
 (env) > python3 main.py
 ```
@@ -24,11 +26,13 @@ python3 main.py
 This will generate a chart showing the world population over the years.
 
 Data by continent.
+
 <p align="center">
   <img src="./images/european_continent.png" style="border-radius:6px" alt="european_continent chart">
 </p>
 
 Data countries.
+
 <p align="center">
   <img src="./images/countries.png" style="border-radius:6px;" alt="european_continent chart">
 </p>
@@ -40,9 +44,9 @@ Data countries.
 </p>
 
 <p align="center">
-  <img src="./images/Gibraltar.png" style="border-radius:6px; max-width:45%; @media-query", alt="gibraltar chart">
+  <img src="./images/Gibraltar_europe.png" style="border-radius:6px; max-width:45%; @media-query", alt="gibraltar chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/asian_continent.png" style="border-radius:6px; max-width:45%;", alt="asian_continent chart">
+  <img src="./images/Asian_continent.png" style="border-radius:6px; max-width:45%;", alt="asian_continent chart">
 </p>
 
 <!-- <table style="border:none; border:0; border-collapse:collapse;">
@@ -67,16 +71,18 @@ Data countries.
   </tr>
 </table> -->
 
-
 #### Customization
+
 Feel free to customize the code to suit your specific needs. You can adjust population and year data in the main.py file according to your preferences.
 
 #### Contributions
+
 Contributions are welcome! If you find any issues or have suggested improvements, please open an issue or submit a pull request.
 
 ##### License
+
 This project is licensed under the MIT License.
 
-------------
-> Creator: Rigoberto Bruno Maldonado.
+---
 
+> Creator: Rigoberto Bruno Maldonado.
