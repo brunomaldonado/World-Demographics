@@ -34,19 +34,19 @@ Data by continent.
 Data countries.
 
 <p align="center">
-  <img src="./images/countries.png" style="border-radius:6px;" alt="european_continent chart">
+  <img src="./images/countries.png" style="border-radius:6px;" alt="countries chart">
 </p>
 
 <p align="center">
-  <img src="./images/trinidad_tobago.png" style="border-radius:6px", width="45%" alt="trinidad_and_tobago chart">
+  <img src="./images/trinidad_and_tobago.png" style="border-radius:6px", width="45% alt="trinidad_and_tobago chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/arab_emirates.png" style="border-radius:6px", width="45%" alt="united arab emirates chart">
+  <img src="./images/united_arab_emirates.png" style="border-radius:6px", width="45% alt="united arab emirates chart">
 </p>
 
 <p align="center">
-  <img src="./images/Gibraltar_europe.png" style="border-radius:6px" width="45%", alt="gibraltar chart">
+  <img src="./images/gibraltar.png" style="border-radius:6px; max-width:45%; @media-query", alt="gibraltar chart">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="./images/Asian.png" style="border-radius:6px" width="45%", alt="asian_continent chart">
+  <img src="./images/asian_continent.png" style="border-radius:6px; max-width:45%;", alt="asian_continent chart">
 </p>
 
 <!-- <table style="border:none; border:0; border-collapse:collapse;">
